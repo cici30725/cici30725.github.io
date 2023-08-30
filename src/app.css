@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-    .link {
-      @apply underline underline-offset-[3px] decoration-neutral-400 dark:decoration-neutral-500;
-      @apply hover:text-black hover:decoration-black transition-colors;
-      @apply dark:hover:text-white dark:hover:decoration-white;
-    }
+	.link {
+		@apply underline underline-offset-[3px] decoration-neutral-400 dark:decoration-neutral-500;
+		@apply hover:text-black hover:decoration-black transition-colors;
+		@apply dark:hover:text-white dark:hover:decoration-white;
+	}
 }

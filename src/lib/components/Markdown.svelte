@@ -3,18 +3,18 @@
 
 	export let source: string;
 
-    marked.use({
-        renderer: {
-            link(href: string, title: string | null, text: string) {
-                let out = `<a rel="external" href="${encodeURI(href)}" class="link"`;
-                if (title) {
-                out += ' title="' + title + '"';
-                }
-                out += ">" + text + "</a>";
-                return out;
-            },
-        },
-    });
+	marked.use({
+		renderer: {
+			link(href: string, title: string | null | undefined, text: string) {
+				let out = `<a rel="external" href="${encodeURI(href)}" class="link"`;
+				if (title) {
+					out += ' title="' + title + '"';
+				}
+				out += '>' + text + '</a>';
+				return out;
+			}
+		}
+	});
 
 	$: html = marked.parse(source, {
 		smartLists: true,
