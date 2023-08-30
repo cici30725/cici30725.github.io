@@ -3,7 +3,7 @@ papers:
     date: 2023
     link: /pdf/PSI_report.pdf
     summary: >
-      Survey of modern research in the private set intersection cryptographic protocol. 
+      Survey of modern research in the private set intersection cryptographic protocol.
       Final project for the course Theoretical Aspects of Modern Cryptography.
 
 notes:

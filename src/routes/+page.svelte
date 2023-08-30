@@ -1,9 +1,19 @@
 <script lang='ts'>
+    import Project from "./Project.svelte";
     import writing from "./writing.yaml";
     import WritingList from "./WritingList.svelte";
+
+    const projects = import.meta.glob('../projects/*.md', { eager: true }) as any;
+    const projectKeys = Object.keys(projects)
+
+    const images = import.meta.glob("../projects/*.{png,jpg,svg}", {
+        eager: true,
+    }) as any;
+
+    // $: html = marked.parse('# Marked in Node.js\n\nRendered by **marked**.');
 </script>
 
-<div class="flex flex-col items-center mt-10 py-5 gap-y-5">
+<div class="flex flex-col items-center my-10 py-5 gap-y-5">
     <div class="whitespace-nowrap">
         <h1 class="text-4xl font-bold">HSI-KANG HSU</h1>
     </div>
@@ -22,6 +32,22 @@
         </p>
     </div>
 </div>
+
+<fieldset class="border-t border-gray-500">
+    <legend class="mx-auto px-4 text-black text-2xl italic">Projects</legend>
+</fieldset>
+
+{#each projectKeys as id (id)}
+    <section class="py-10">
+        <div class="mx-auto max-w-[1152px] px-4 sm:px-6">
+        <Project data={projects[id]} {images}/>
+        </div>
+    </section>
+{/each}
+
+<fieldset class="border-t border-gray-500">
+    <legend class="mx-auto px-4 text-black text-2xl italic">Writings</legend>
+</fieldset>
 
 <div class="flex flex-col items-start m-auto max-w-4xl">
     <div class="p-12">
