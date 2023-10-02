@@ -1,4 +1,10 @@
 papers:
+  - title: An Efficient Tree for the LIBOR Market Model
+    date: 2023
+    link: /pdf/LMM_Thesis.pdf
+    summary: >
+      My master’s thesis, where I design and implement an efficient tree algorithm for pricing interest-rate derivatives under the LIBOR Market Model.
+
   - title: Private Set Intersection
     date: 2023
     link: /pdf/PSI_report.pdf

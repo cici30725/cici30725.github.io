@@ -9,7 +9,7 @@
 </script>
 
 {#each data as item}
-	<div>
+	<div class="mb-10">
 		<div class="text-lg text-black">
 			{item.title}
 			<a href={item.link} target="_blank">
